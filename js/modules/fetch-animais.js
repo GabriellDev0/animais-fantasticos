@@ -6,7 +6,7 @@ export default function fetchAnimais(url, target) {
   function createAnimal(animal) {
     const div = document.createElement('div');
     div.classList.add('numero-animal');
-    div.innerHTML = `<h3>${animal.specie}</h3><span data-numero>${animal.total}</span>`;
+    div.innerHTML = `<h3>${animal.especie}</h3><span data-numero>${animal.total}</span>`;
     return div;
   }
 
@@ -33,7 +33,7 @@ export default function fetchAnimais(url, target) {
 
       // Após a transformação de json, ativa as funções
       // para preencher e animar os números
-      animaisJSON.forEach(animal => preencherAnimais(animal));
+      animaisJSON.forEach((animal) => preencherAnimais(animal));
       animaAnimaisNumeros();
     } catch (erro) {
       console.log(erro);
